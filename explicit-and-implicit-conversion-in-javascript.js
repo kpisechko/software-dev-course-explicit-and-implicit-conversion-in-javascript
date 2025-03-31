@@ -19,14 +19,22 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = "5" - 2; // implicit type conversion didn't need fixed 
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isValid = Boolean(false); // removed quotation from "false" changing it from a String to a falsey Boolean
 if (isValid) {
     console.log("This is valid!");
 }
 
-let age = "25";
-let totalAge = age + 5;
+let age = "25"; // added Number() to age variable converting it from a String to a Number
+let totalAge = Number(age) + 5;
 console.log("Total Age: " + totalAge);
+
+let hardcoverBookCost = 38;
+let paperbackBookCost = 15;
+console.log(`A hardcover book costs $${hardcoverBookCost} but the paperback only costs $${paperbackBookCost}.`);
+
+let answer = true;
+console.log(answer.toString());
+
